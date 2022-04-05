@@ -3,8 +3,7 @@
 
 
 
-Una volta completate queste funzioni di utilità di base, e dato il seguente array di numeri [2, 6, 7, 5, 3, 9] già dichiarato nel vostro codice, si vogliono utilizzare le funzioni per:
-Stampare l’array di numeri fornito a video
+
 Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato (Verificare che l’array originale non sia stato modificato quindi ristampare nuovamente l’array originale e 
 verificare che sia rimasto [2, 6, 7, 5, 3, 9])
 Stampare la somma di tutti i numeri
@@ -40,7 +39,7 @@ int Quadrato(int numero)
 }
 
 
-//int[] ElevaArrayAlQuadrato(int[] array): che preso un array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato.
+//int[] ElevaArrayAlQuadrato(int[] array coi quadrati dei valori originali
 
 
 int[] QuadratoDiElementaArray(int[] array)
@@ -48,7 +47,7 @@ int[] QuadratoDiElementaArray(int[] array)
     int[] copiaArray = (int[])array.Clone(); //lo sostituisce
     for (int i = 0; i < copiaArray.Length; i++)
     {
-        copiaArray[i] = copiaArray[i] * copiaArray[i];
+        copiaArray[i] = Quadrato(copiaArray [i]);
     }
     return copiaArray;
 }
@@ -91,8 +90,10 @@ int[] laMiaArray = new int[] { 2, 6, 7, 5, 3, 9 };
 StampaArray(laMiaArray);
 
 //quadrato dei numeri
-int[] arrayElevata = QuadratoDiElementaArray(laMiaArray);
-Console.WriteLine(arrayElevata);
+Console.WriteLine(QuadratoDiElementaArray(laMiaArray));
+
+//Stampare l’array di numeri fornito a video
+StampaArray(laMiaArray);
 
 //somma
 int somma = SommaElementiArray(laMiaArray);
