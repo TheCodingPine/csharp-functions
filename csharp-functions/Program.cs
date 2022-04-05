@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-/*
+﻿/*
 
 
 
@@ -59,7 +56,7 @@ int[] QuadratoDiElementaArray(int[] array)
 
 //int sommaElementiArray(int[] array): che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
 
-
+/*
 int[] SommaElementiArray(int[] array)
 {
     int[] copiaArray = (int[])array.Clone(); //lo sostituisce
@@ -69,4 +66,37 @@ int[] SommaElementiArray(int[] array)
          somma = somma + array[i];
     }
     return somma;
+}*/
+
+
+int SommaElementiArray(int[] array)
+{
+    int[] copiArray = (int[])array.Clone();
+    int somma = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        somma = somma + array[i];
+    }
+    return somma;
 }
+
+
+
+//--------------CODICE--------------
+
+int[] laMiaArray = new int[] { 2, 6, 7, 5, 3, 9 };
+
+
+//Stampare l’array di numeri fornito a video
+StampaArray(laMiaArray);
+
+//quadrato dei numeri
+int[] arrayElevata = QuadratoDiElementaArray(laMiaArray);
+Console.WriteLine(arrayElevata);
+
+//somma
+int somma = SommaElementiArray(laMiaArray);
+Console.WriteLine(somma);
+
+//quadrato di somma
+Console.WriteLine(Quadrato(somma)); 
