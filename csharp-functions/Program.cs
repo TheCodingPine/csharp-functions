@@ -5,7 +5,7 @@ Console.WriteLine("Hello, World!");
 
 
 
-int sommaElementiArray(int[] array): che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
+
 Una volta completate queste funzioni di utilità di base, e dato il seguente array di numeri [2, 6, 7, 5, 3, 9] già dichiarato nel vostro codice, si vogliono utilizzare le funzioni per:
 Stampare l’array di numeri fornito a video
 Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato (Verificare che l’array originale non sia stato modificato quindi ristampare nuovamente l’array originale e 
@@ -48,9 +48,25 @@ int Quadrato(int numero)
 
 int[] QuadratoDiElementaArray(int[] array)
 {
-    int[] copiaArray = (int[])array.Clone(); //o sostituisce
+    int[] copiaArray = (int[])array.Clone(); //lo sostituisce
     for (int i = 0; i < copiaArray.Length; i++)
     {
         copiaArray[i] = copiaArray[i] * copiaArray[i];
     }
     return copiaArray;
+}
+
+
+//int sommaElementiArray(int[] array): che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
+
+
+int[] SommaElementiArray(int[] array)
+{
+    int[] copiaArray = (int[])array.Clone(); //lo sostituisce
+    int somma = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+         somma = somma + array[i];
+    }
+    return somma;
+}
