@@ -30,7 +30,6 @@ void StampaArray (int[] array)
         {
             Console.Write(array [i]);
         }
-        
     }
     Console.WriteLine("]");
 }
@@ -44,15 +43,14 @@ int Quadrato(int numero)
 }
 
 
+//int[] ElevaArrayAlQuadrato(int[] array): che preso un array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato.
 
-//int[] ElevaArrayAlQuadrato(int[] array): che preso un array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato. Attenzione: è importante restituire un nuovo array, e non modificare l’array come parametro della funzione! Vi ricordate perchè? Pensateci (vedi slide)
 
-
-int[] sommaUnoArray(int[] array)
+int[] QuadratoDiElementaArray(int[] array)
 {
-    int[] copiaArray = (int[])array.Clone();
+    int[] copiaArray = (int[])array.Clone(); //o sostituisce
     for (int i = 0; i < copiaArray.Length; i++)
     {
-        copiaArray[i] = copiaArray[i] + 1;
+        copiaArray[i] = copiaArray[i] * copiaArray[i];
     }
     return copiaArray;
