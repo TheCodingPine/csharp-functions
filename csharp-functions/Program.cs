@@ -42,12 +42,12 @@ int Quadrato(int numero)
 //int[] ElevaArrayAlQuadrato(int[] array coi quadrati dei valori originali
 
 
-int[] QuadratoDiElementaArray(int[] array)
+int[] QuadratoDiElementiArray(int[] array)
 {
     int[] copiaArray = (int[])array.Clone(); //lo sostituisce
-    for (int i = 0; i < copiaArray.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        copiaArray[i] = Quadrato(copiaArray [i]);
+        copiaArray[i] = Quadrato(copiaArray[i]);
     }
     return copiaArray;
 }
@@ -70,7 +70,7 @@ int[] SommaElementiArray(int[] array)
 
 int SommaElementiArray(int[] array)
 {
-    int[] copiArray = (int[])array.Clone();
+  //  int[] copiArray = (int[])array.Clone();
     int somma = 0;
     for (int i = 0; i < array.Length; i++)
     {
@@ -90,7 +90,7 @@ int[] laMiaArray = new int[] { 2, 6, 7, 5, 3, 9 };
 StampaArray(laMiaArray);
 
 //quadrato dei numeri
-Console.WriteLine(QuadratoDiElementaArray(laMiaArray));
+StampaArray(QuadratoDiElementiArray(laMiaArray));
 
 //Stampare l’array di numeri fornito a video
 StampaArray(laMiaArray);
